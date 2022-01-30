@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Ninja</title>
+	<link rel="icon" type="image/png" href="ico2.png">
+	<meta name="description" content="A game about smashing cubes.">
+	<meta name="theme-color" content="#2c3f51">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139938978-1"></script>
+	<script>
+		if (location.hostname !== 'localhost') {
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-139938978-1');
+		}
+	</script>
+</head>
+<body>
+	<canvas id="c"></canvas>
+
+	<div class="hud">
+		<div class="hud__score">
+			<div class="score-lbl"></div>
+			<div class="cube-count-lbl"></div>
+		</div>
+		<div class="pause-btn"><div></div></div>
+		<div class="slowmo">
+			<div class="slowmo__bar"></div>
+		</div>
+	</div>
+
+	<div class="menus">
+		<div class="menu menu--main">
+			<h1>NINJA</h1>
+			<button type="button" class="play-normal-btn">PLAY GAME</button>
+			<button type="button" class="play-casual-btn">CASUAL MODE</button>
+			<div class="credits">Game by <a href="https://github.com/harshalparmar">Github</a></div>
+		</div>
+		<div class="menu menu--pause">
+			<h1>Paused</h1>
+			<button type="button" class="resume-btn">RESUME GAME</button>
+			<button type="button" class="menu-btn--pause">MAIN MENU</button>
+		</div>
+		<div class="menu menu--score">
+			<h1>Game Over</h1>
+			<h2>Your Score:</h2>
+			<div class="final-score-lbl"></div>
+			<div class="high-score-lbl"></div>
+			<button type="button" class="play-again-btn">PLAY AGAIN</button>
+			<button type="button" class="menu-btn--score">MAIN MENU</button>
+		</div>
+	</div>
+
+	<script src="js/globalConfig.js"></script>
+	<script src="js/state.js"></script>
+	<script src="js/utils.js"></script>
+	<script src="js/3dModels.js"></script>
+	<script src="js/Entity.js"></script>
+	<script src="js/getTarget.js"></script>
+	<script src="js/createBurst.js"></script>
+	<script src="js/sparks.js"></script>
+	<script src="js/hud.js"></script>
+	<script src="js/menus.js"></script>
+	<script src="js/actions.js"></script>
+	<script src="js/tick.js"></script>
+	<script src="js/draw.js"></script>
+	<script src="js/canvas.js"></script>
+	<script src="js/interaction.js"></script>
+	<script src="js/index.js"></script>
+
+	<script src="js/PERF.js"></script>
+	<script src="js/tests/expect.min.js"></script>
+	<script src="js/tests/testRunner.js"></script>
+	<script src="js/tests/utils.test.js"></script>
+</body>
+</html>
